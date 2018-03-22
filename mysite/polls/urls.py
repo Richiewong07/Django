@@ -18,3 +18,6 @@ urlpatterns = [
     # 127.0.0.1/polls/1/votes
     url(r'^(?P<question_id>[0-9]+)/vote$', views.vote, name="vote"),
 ]
+
+
+app_name = 'polls'

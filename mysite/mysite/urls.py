@@ -18,8 +18,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+
 urlpatterns = [
     url('admin/', admin.site.urls),
     # ADD URL PATH TO MYSITE
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),  # ADD NAMESPACE THEN REFERENCE POLLS APP INSIDE YOUR URL --> index.html
 ]
+
+# NEED TO ADD APP NAME IN polls/urls.py
