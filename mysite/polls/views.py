@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+
+
 from .models import Question
 
 # Create your views here.
@@ -8,12 +10,13 @@ from .models import Question
 # HTTP RESPONSE --> ADDS BASIC TEXT TO YOUR WEBSITE
 def index(request):
 
-    # IMPORTED pub_date FROM Question Class FROM Models
-    # GET QUESTION OBJECTS AND ORDER THEM BY DATE
-    # JOIN THEM OUT OUTPUT AND RETURN IT IN HTTP REQUEST
-    lastest_questions = Question.objects.order_by('-pub_date')[:5]
-    output = ", ".join(q.question_text for q in lastest_questions)
-    return HttpResponse(output)
+    # IMPORTED questions_text FROM Question Class FROM Models AND ORDERED BY pub_date
+    latest_questions = Question.objects.order_by('-pub_date')[:5]
+
+
+    # LOAD AND RETURN DATA
+    context = {'latest_questions': latest_questions}
+    return render(request, 'polls/index.html', context)
 
 
 def detail(request, question_id):
