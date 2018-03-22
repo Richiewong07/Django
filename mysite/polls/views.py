@@ -15,12 +15,13 @@ def index(request):
 
 
     # LOAD AND RETURN DATA
-    context = {'latest_questions': latest_questions}
+    context = {'latest_questions': latest_questions}    # PASSES lastest_questions to index.html
     return render(request, 'polls/index.html', context)
 
 
 def detail(request, question_id):
-    return HttpResponse("This is the detail view of the question: %s" % question_id)
+    question = Question.objects.get(pk = question_id)
+    return render(request, 'polls/detail.html', {'question': question}) # PASSES question to detail.html
 
 
 def results(request, question_id):
