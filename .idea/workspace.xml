@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e296c61-da0f-476e-8d2d-8a26f6d616d3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/templates/polls/base.html" afterPath="$PROJECT_DIR$/mysite/polls/templates/polls/base.html" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/templates/polls/detail.html" afterPath="$PROJECT_DIR$/mysite/polls/templates/polls/detail.html" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/templates/polls/footer.html" afterPath="$PROJECT_DIR$/mysite/polls/templates/polls/footer.html" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/templates/polls/index.html" afterPath="$PROJECT_DIR$/mysite/polls/templates/polls/index.html" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/templates/polls/results.html" afterPath="$PROJECT_DIR$/mysite/polls/templates/polls/results.html" />
-      <change beforePath="$PROJECT_DIR$/mysite/polls/views.py" afterPath="$PROJECT_DIR$/mysite/polls/views.py" />
-    </list>
+    <list default="true" id="8e296c61-da0f-476e-8d2d-8a26f6d616d3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
