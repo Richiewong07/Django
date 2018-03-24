@@ -7,24 +7,29 @@
 <h1>{{question.question_text}}</h1>
 
 
-<!--SHOWS ERROR MESSAGE -->
+<!--IF ERROR MESSAGE, SHOWS ERROR MESSAGE -->
 {% if error_message %}
     <p><strong> {{error_message}} </strong></p>
 {% endif %}
 
 
 
-<!--FORM-->
+<!--FORM IS A POST METHOD-->
+<!--ACTION PASS question.id INTO vote.view-->
+<!--NEED TO PASS csrf_token TO MAKE SURE DATA IS STOLEN-->
 <form action = "{% url 'polls:vote' question.id %}" method="post">
     {% csrf_token %}
     {% for choice in question.choice_set.all %}
+        <!--forloop.counter LOOPS THROUGH THE CHOICES-->
+        <!--choice.id IS THE VALUE OF THE SELECTED CHOICE-->
         <input type = "radio" name = "choice" id = "choice{{forloop.counter}}" value = "{{choice.id}}"/>
+        <!--label NEEDS TO GET WHAT CHOICE YOU WANT TO DISPLAY-->
         <label for = "choice{{forloop.counter}}"> {{choice.choice_text}} </label> <br>
     {% endfor %}
-    <input type = "submit" value = "vote"/>
+    <input type = "submit" class="btn btn-success" value = "vote"/>
 </form>
 
-
+<a href="{% url 'polls:index' %}"> <- Back to Question List</a>
 
 <!--<ul>-->
     <!--{% for choice in question.choice_set.all %}-->
